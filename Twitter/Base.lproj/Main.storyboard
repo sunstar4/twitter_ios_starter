@@ -67,31 +67,38 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQW-Mc-CJ0">
                                             <rect key="frame" x="16" y="11" width="65" height="65"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="KdS-UB-q3P"/>
-                                                <constraint firstAttribute="height" constant="65" id="g6f-dB-OuJ"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="3rx-nN-Q3T"/>
+                                                <constraint firstAttribute="height" constant="65" id="MK2-6f-Qkk"/>
+                                                <constraint firstAttribute="width" constant="65" id="dEp-v0-5UA"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foh-05-VAA">
-                                            <rect key="frame" x="89" y="11" width="44" height="11"/>
-                                            <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="8"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-lr-G50">
-                                            <rect key="frame" x="89" y="24" width="270" height="10.5"/>
-                                            <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="7"/>
-                                            <color key="textColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oVu-v6-t54">
+                                            <rect key="frame" x="89" y="11" width="270" height="98"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foh-05-VAA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="36"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                                                    <color key="textColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-lr-G50">
+                                                    <rect key="frame" x="0.0" y="44" width="270" height="54"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="12"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ysP-lr-G50" firstAttribute="trailing" secondItem="vOm-lj-0LI" secondAttribute="trailingMargin" id="6Sw-t9-ylB"/>
-                                        <constraint firstItem="bQW-Mc-CJ0" firstAttribute="leading" secondItem="vOm-lj-0LI" secondAttribute="leadingMargin" id="JBK-iO-DzR"/>
-                                        <constraint firstItem="ysP-lr-G50" firstAttribute="leading" secondItem="bQW-Mc-CJ0" secondAttribute="trailing" constant="8" symbolic="YES" id="QkT-xI-gsG"/>
-                                        <constraint firstItem="foh-05-VAA" firstAttribute="leading" secondItem="bQW-Mc-CJ0" secondAttribute="trailing" constant="8" id="RaR-KI-frX"/>
-                                        <constraint firstItem="foh-05-VAA" firstAttribute="top" secondItem="vOm-lj-0LI" secondAttribute="topMargin" id="d5n-oH-a6y"/>
-                                        <constraint firstItem="bQW-Mc-CJ0" firstAttribute="top" secondItem="vOm-lj-0LI" secondAttribute="topMargin" id="hUd-oJ-Ghr"/>
-                                        <constraint firstItem="ysP-lr-G50" firstAttribute="top" secondItem="foh-05-VAA" secondAttribute="bottom" constant="2" id="jjQ-Fx-lJK"/>
+                                        <constraint firstItem="bQW-Mc-CJ0" firstAttribute="leading" secondItem="vOm-lj-0LI" secondAttribute="leadingMargin" id="TRK-0S-zzy"/>
+                                        <constraint firstItem="oVu-v6-t54" firstAttribute="leading" secondItem="bQW-Mc-CJ0" secondAttribute="trailing" constant="8" id="amq-kM-3ea"/>
+                                        <constraint firstItem="oVu-v6-t54" firstAttribute="top" secondItem="vOm-lj-0LI" secondAttribute="topMargin" id="dN5-32-qyh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oVu-v6-t54" secondAttribute="bottom" id="m8r-s3-NGQ"/>
+                                        <constraint firstItem="bQW-Mc-CJ0" firstAttribute="leading" secondItem="vOm-lj-0LI" secondAttribute="leadingMargin" id="pcS-vv-A3K"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bQW-Mc-CJ0" secondAttribute="bottom" constant="33" id="toE-gx-Q2G"/>
+                                        <constraint firstItem="bQW-Mc-CJ0" firstAttribute="top" secondItem="vOm-lj-0LI" secondAttribute="topMargin" id="udc-DO-dIf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oVu-v6-t54" secondAttribute="trailing" id="zXt-G9-IWC"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
