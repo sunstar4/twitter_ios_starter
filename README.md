@@ -25,17 +25,22 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://g.recordit.co/VsQ6D2ki1G.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+App icon & log in screen:
 
+<img src='http://g.recordit.co/qK0G5W4OfN.gif' width='' alt='Video Walkthrough' />
 
-<img src='http://g.recordit.co/L5Gp9e7VqI.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Log out screen:
 
+<img src='http://g.recordit.co/BvbHV6Gwb6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+Stay logged in & view tweets screen:
+
+<img src='http://g.recordit.co/ezaSjDoxur.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 Bonus Features:
 
+Pull to refresh & infinite scroll:
 
-<img src='http://g.recordit.co/G2IJJRRE6T.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<img src='http://g.recordit.co/RVvzn9d5Rs.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/P7TTSoh4NH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
