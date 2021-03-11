@@ -21,7 +21,18 @@ class HomeTableViewController: UITableViewController {
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         //add below to see the loading wheel
         tableView.refreshControl = myRefreshControl
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 150
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadTweets()
+    }
+    
+    
+    
+    
     
     @objc func loadTweets(){
         
@@ -79,8 +90,7 @@ class HomeTableViewController: UITableViewController {
             loadMoreTweets()
         }
     }
-    
-    
+
     
     @IBAction func onLogoutBarButton(_ sender: Any) {
         TwitterAPICaller.client?.logout()
@@ -103,10 +113,15 @@ class HomeTableViewController: UITableViewController {
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+            
+        cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
+        
         return cell
-    }
-    
-    
+        
+        }
+        
     //how many sections I want
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -118,7 +133,7 @@ class HomeTableViewController: UITableViewController {
         //should not be just return a set #, should be return tweet array
         return tweetArray.count
     }
-    
+
     /*
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -175,4 +190,9 @@ class HomeTableViewController: UITableViewController {
      */
     
 }
+
+    
+    
+    
+
 
