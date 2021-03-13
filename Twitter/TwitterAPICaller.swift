@@ -115,6 +115,30 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
                                         (task: URLSessionDataTask?, error: Error) in failure(error)
                                       })
     }
+
+        
+    
+    
+    /*
+    func getCurrentAccount(completion: @escaping (User?, Error?) -> ()) {
+            request(URL(string: "https://api.twitter.com/1.1/account/verify_credentials.json")!)
+                .validate()
+                .responseJSON { response in
+                    switch response.result {
+                    case .failure(let error):
+                        completion(nil, error)
+                        break;
+                    case .success:
+                        guard let userDictionary = response.result.value as? [String: Any] else {
+                            completion(nil, JSONError.parsing("Unable to create user dictionary"))
+                            return
+                        }
+                        completion(User(dictionary: userDictionary), nil)
+                    }
+            }
+        }
+
+*/
 }
 
 
